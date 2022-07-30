@@ -16,20 +16,20 @@ namespace Sales.WebAPI.Controllers
             _item = item;
         }
         [HttpGet("GetTopN")]
-        public IActionResult GetTopNItems(int n)
+        public async Task<IActionResult> GetTopNItems(int n)
         {
-            return Ok(_item.GetTopNItem(n));
+            return Ok(await _item.GetTopNItem(n));
         }
         [HttpPost]
-        public IActionResult AddItem([FromBody] Item item)
+        public async Task<IActionResult> AddItem([FromBody] Item item)
         {
-            _item.AddNewItem(item);
+           await _item.AddNewItem(item);
             return Ok();
         }
         [HttpPut("AddToOldItem")]
-        public IActionResult AddToItem(int ItemId, int quantity)
+        public async Task<IActionResult> AddToItem(int ItemId, int quantity)
         {
-            _item.AddToOldItem(ItemId, quantity);
+            await _item.AddToOldItem(ItemId, quantity);
             return Ok();
         }
     }
