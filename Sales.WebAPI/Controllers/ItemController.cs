@@ -32,5 +32,18 @@ namespace Sales.WebAPI.Controllers
             await _item.AddToOldItem(ItemId, quantity);
             return Ok();
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            return Ok(await _item.GetAlltems());
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteItem(int ItemId)
+        {
+            await _item.RemoveItem(ItemId);
+            return Ok();
+        }
     }
 }

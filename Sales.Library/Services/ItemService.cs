@@ -38,6 +38,11 @@ namespace Sales.Library.Services
                 throw new ArgumentException("Item not found", "ItemId");
         }
 
+        public async Task<List<Item>> GetAlltems()
+        {
+            return await _session.Query<Item>().ToListAsync();
+        }
+
         public async Task<List<Item>> GetTopNItem(int n)
         {
            return await _session.Query<Item>().Take(n).ToListAsync();
@@ -52,7 +57,21 @@ namespace Sales.Library.Services
             }
             await _session.BeginTransaction().CommitAsync();
         }
-       private async Task UpdateSaleItem(int id, int quantity)
+
+        public async Task RemoveItem(int itemId)
+        {
+            var p=await _session.Query<Item>().FirstOrDefaultAsync(x=>x.Id==itemId);
+            if (p is not null)
+            {
+                _session.Delete(p);
+                await _session.BeginTransaction().CommitAsync();
+            }
+            else
+                throw new ArgumentException("Item not found.");
+            
+        }
+
+        private async Task UpdateSaleItem(int id, int quantity)
         {
             var itm = await _session.Query<Item>().FirstOrDefaultAsync(x => x.Id == id);
             if (itm != null)

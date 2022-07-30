@@ -10,5 +10,8 @@ namespace Sales.Library.Services
         Task<List<Item>> GetTopNItem(int n);
         void OnMadeSale(object? source, SaleEventArg e);
 
+        Task<List<Item>> GetAlltems();
+
+        Task RemoveItem(int itemId);
     }
 }
