@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "8bW11C1bBwQvuzMy6Xe10NEsCwKgAltsZok8KXZ7lvQ=",
+  "Source": "Sales.WebAPI",
+  "BasePath": "_content/Sales.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
