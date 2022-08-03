@@ -19,17 +19,17 @@ namespace Sales.WebAPI.Controllers
             _item = item;
         }
         [HttpGet("DailySale")]
-        public async Task<IActionResult> GetDailySale(DateTime day)
+        public IActionResult GetDailySale(DateTime day)
         {
-            return Ok(await _sale.GetDailySeleItems(day));
+            return Ok(_sale.GetDailySeleItems(day));
         }
         [HttpPost("MakeSale")]
-        public async Task<IActionResult> SellItem(List<Item> items)
+        public IActionResult SellItem(List<Item> items)
         {
             if (items != null && items.Count != 0)
             {
                 _sale.MadeSale += _item.OnMadeSale;
-              await  _sale.SellItems(items);
+              _sale.SellItems(items);
                 return Ok();
             }
             return BadRequest();

@@ -1909,20 +1909,44 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "Sales.Library/1.0.0": {
+      "Sale.Dome/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Sale.Dome.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sale.Dome.dll": {}
+        }
+      },
+      "Sale.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Sale.Dome": "1.0.0",
+          "Sales.DB": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sale.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sale.Infrastructure.dll": {}
+        }
+      },
+      "Sales.DB/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "FluentNHibernate": "3.1.0",
-          "Microsoft.Data.SqlClient": "4.1.0",
+          "Sale.Dome": "1.0.0",
           "System.Data.SQLite.Core": "1.0.116",
           "System.Data.SqlClient": "4.8.3"
         },
         "compile": {
-          "bin/placeholder/Sales.Library.dll": {}
+          "bin/placeholder/Sales.DB.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Sales.Library.dll": {}
+          "bin/placeholder/Sales.DB.dll": {}
         }
       }
     }
@@ -6818,16 +6842,26 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Sales.Library/1.0.0": {
+    "Sale.Dome/1.0.0": {
       "type": "project",
-      "path": "../Sales.Library/Sales.Library.csproj",
-      "msbuildProject": "../Sales.Library/Sales.Library.csproj"
+      "path": "../Sale.Dome/Sale.Dome.csproj",
+      "msbuildProject": "../Sale.Dome/Sale.Dome.csproj"
+    },
+    "Sale.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Sale.Application/Sale.Infrastructure.csproj",
+      "msbuildProject": "../Sale.Application/Sale.Infrastructure.csproj"
+    },
+    "Sales.DB/1.0.0": {
+      "type": "project",
+      "path": "../Sales.Library/Sales.DB.csproj",
+      "msbuildProject": "../Sales.Library/Sales.DB.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.Data.SqlClient >= 4.1.0",
-      "Sales.Library >= 1.0.0",
+      "Sale.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "System.Data.SqlClient >= 4.8.3"
     ]
@@ -6867,8 +6901,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\dell\\source\\repos\\KellySaleMS\\Sales.Library\\Sales.Library.csproj": {
-              "projectPath": "C:\\Users\\dell\\source\\repos\\KellySaleMS\\Sales.Library\\Sales.Library.csproj"
+            "C:\\Users\\dell\\source\\repos\\KellySaleMS\\Sale.Application\\Sale.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\dell\\source\\repos\\KellySaleMS\\Sale.Application\\Sale.Infrastructure.csproj"
             }
           }
         }

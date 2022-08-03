@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sales.WebAPI", "Sales.WebAPI\Sales.WebAPI.csproj", "{D41D2C40-AC55-44F7-B1A6-BA934BA43048}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sales.WebAPI", "Sales.WebAPI\Sales.WebAPI.csproj", "{D41D2C40-AC55-44F7-B1A6-BA934BA43048}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sales.Library", "Sales.Library\Sales.Library.csproj", "{32C6B6CE-80AD-4BEB-905C-44944CF66BC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sales.DB", "Sales.Library\Sales.DB.csproj", "{32C6B6CE-80AD-4BEB-905C-44944CF66BC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sale.Dome", "Sale.Dome\Sale.Dome.csproj", "{66B5A073-7919-4775-B53C-219E2E1F322C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sale.Infrastructure", "Sale.Application\Sale.Infrastructure.csproj", "{E43A998E-C994-4ED2-A282-BF2626AAF889}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{32C6B6CE-80AD-4BEB-905C-44944CF66BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32C6B6CE-80AD-4BEB-905C-44944CF66BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32C6B6CE-80AD-4BEB-905C-44944CF66BC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66B5A073-7919-4775-B53C-219E2E1F322C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66B5A073-7919-4775-B53C-219E2E1F322C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66B5A073-7919-4775-B53C-219E2E1F322C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66B5A073-7919-4775-B53C-219E2E1F322C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E43A998E-C994-4ED2-A282-BF2626AAF889}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E43A998E-C994-4ED2-A282-BF2626AAF889}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E43A998E-C994-4ED2-A282-BF2626AAF889}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E43A998E-C994-4ED2-A282-BF2626AAF889}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

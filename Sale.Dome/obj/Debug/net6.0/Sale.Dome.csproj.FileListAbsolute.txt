@@ -1,0 +1,12 @@
+C:\Users\dell\source\repos\KellySaleMS\Sale.Dome\bin\Debug\net6.0\Sale.Dome.deps.json
+C:\Users\dell\source\repos\KellySaleMS\Sale.Dome\bin\Debug\net6.0\Sale.Dome.dll
+C:\Users\dell\source\repos\KellySaleMS\Sale.Dome\bin\Debug\net6.0\Sale.Dome.pdb
+C:\Users\dell\source\repos\KellySaleMS\Sale.Dome\obj\Debug\net6.0\Sale.Dome.csproj.AssemblyReference.cache
+C:\Users\dell\source\repos\KellySaleMS\Sale.Dome\obj\Debug\net6.0\Sale.Dome.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dell\source\repos\KellySaleMS\Sale.Dome\obj\Debug\net6.0\Sale.Dome.AssemblyInfoInputs.cache
+C:\Users\dell\source\repos\KellySaleMS\Sale.Dome\obj\Debug\net6.0\Sale.Dome.AssemblyInfo.cs
+C:\Users\dell\source\repos\KellySaleMS\Sale.Dome\obj\Debug\net6.0\Sale.Dome.csproj.CoreCompileInputs.cache
+C:\Users\dell\source\repos\KellySaleMS\Sale.Dome\obj\Debug\net6.0\Sale.Dome.dll
+C:\Users\dell\source\repos\KellySaleMS\Sale.Dome\obj\Debug\net6.0\refint\Sale.Dome.dll
+C:\Users\dell\source\repos\KellySaleMS\Sale.Dome\obj\Debug\net6.0\Sale.Dome.pdb
+C:\Users\dell\source\repos\KellySaleMS\Sale.Dome\obj\Debug\net6.0\ref\Sale.Dome.dll

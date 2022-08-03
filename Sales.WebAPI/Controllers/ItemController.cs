@@ -16,33 +16,33 @@ namespace Sales.WebAPI.Controllers
             _item = item;
         }
         [HttpGet("GetTopN")]
-        public async Task<IActionResult> GetTopNItems(int n)
+        public IActionResult GetTopNItems(int n)
         {
-            return Ok(await _item.GetTopNItem(n));
+            return Ok(_item.GetTopNItem(n));
         }
         [HttpPost]
-        public async Task<IActionResult> AddItem([FromBody] Item item)
+        public IActionResult AddItem([FromBody] Item item)
         {
-           await _item.AddNewItem(item);
+           _item.AddNewItem(item);
             return Ok();
         }
         [HttpPut("AddToOldItem")]
-        public async Task<IActionResult> AddToItem(int ItemId, int quantity)
+        public IActionResult AddToItem(int ItemId, int quantity)
         {
-            await _item.AddToOldItem(ItemId, quantity);
+            _item.AddToOldItem(ItemId, quantity);
             return Ok();
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public IActionResult GetAll()
         {
-            return Ok(await _item.GetAlltems());
+            return Ok(_item.GetAlltems());
         }
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteItem(int ItemId)
+        public IActionResult DeleteItem(int ItemId)
         {
-            await _item.RemoveItem(ItemId);
+            _item.RemoveItem(ItemId);
             return Ok();
         }
     }

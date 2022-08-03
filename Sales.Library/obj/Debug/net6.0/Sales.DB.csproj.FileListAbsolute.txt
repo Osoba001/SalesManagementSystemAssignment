@@ -1,0 +1,15 @@
+C:\Users\dell\source\repos\KellySaleMS\Sales.Library\obj\Debug\net6.0\Sales.DB.csproj.AssemblyReference.cache
+C:\Users\dell\source\repos\KellySaleMS\Sales.Library\obj\Debug\net6.0\Sales.DB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dell\source\repos\KellySaleMS\Sales.Library\obj\Debug\net6.0\Sales.DB.AssemblyInfoInputs.cache
+C:\Users\dell\source\repos\KellySaleMS\Sales.Library\obj\Debug\net6.0\Sales.DB.AssemblyInfo.cs
+C:\Users\dell\source\repos\KellySaleMS\Sales.Library\obj\Debug\net6.0\Sales.DB.csproj.CoreCompileInputs.cache
+C:\Users\dell\source\repos\KellySaleMS\Sales.Library\bin\Debug\net6.0\Sales.DB.deps.json
+C:\Users\dell\source\repos\KellySaleMS\Sales.Library\bin\Debug\net6.0\Sales.DB.dll
+C:\Users\dell\source\repos\KellySaleMS\Sales.Library\bin\Debug\net6.0\Sales.DB.pdb
+C:\Users\dell\source\repos\KellySaleMS\Sales.Library\bin\Debug\net6.0\Sale.Dome.dll
+C:\Users\dell\source\repos\KellySaleMS\Sales.Library\bin\Debug\net6.0\Sale.Dome.pdb
+C:\Users\dell\source\repos\KellySaleMS\Sales.Library\obj\Debug\net6.0\Sales.DB.csproj.CopyComplete
+C:\Users\dell\source\repos\KellySaleMS\Sales.Library\obj\Debug\net6.0\Sales.DB.dll
+C:\Users\dell\source\repos\KellySaleMS\Sales.Library\obj\Debug\net6.0\refint\Sales.DB.dll
+C:\Users\dell\source\repos\KellySaleMS\Sales.Library\obj\Debug\net6.0\Sales.DB.pdb
+C:\Users\dell\source\repos\KellySaleMS\Sales.Library\obj\Debug\net6.0\ref\Sales.DB.dll

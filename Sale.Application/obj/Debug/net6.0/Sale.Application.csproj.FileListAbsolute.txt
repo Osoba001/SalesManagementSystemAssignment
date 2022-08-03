@@ -1,0 +1,5 @@
+C:\Users\dell\source\repos\KellySaleMS\Sale.Application\obj\Debug\net6.0\Sale.Application.csproj.AssemblyReference.cache
+C:\Users\dell\source\repos\KellySaleMS\Sale.Application\obj\Debug\net6.0\Sale.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dell\source\repos\KellySaleMS\Sale.Application\obj\Debug\net6.0\Sale.Application.AssemblyInfoInputs.cache
+C:\Users\dell\source\repos\KellySaleMS\Sale.Application\obj\Debug\net6.0\Sale.Application.AssemblyInfo.cs
+C:\Users\dell\source\repos\KellySaleMS\Sale.Application\obj\Debug\net6.0\Sale.Application.csproj.CoreCompileInputs.cache

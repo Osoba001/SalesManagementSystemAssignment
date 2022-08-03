@@ -24,8 +24,6 @@ C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\runtimes\wi
 C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\Sales.Library.dll
-C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\Sales.Library.pdb
 C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\obj\Debug\net6.0\Sales.WebAPI.csproj.AssemblyReference.cache
 C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\obj\Debug\net6.0\Sales.WebAPI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\obj\Debug\net6.0\Sales.WebAPI.AssemblyInfoInputs.cache
@@ -42,7 +40,6 @@ C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\obj\Debug\net6.0\refint\Sale
 C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\obj\Debug\net6.0\Sales.WebAPI.pdb
 C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\obj\Debug\net6.0\Sales.WebAPI.genruntimeconfig.cache
 C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\obj\Debug\net6.0\ref\Sales.WebAPI.dll
-C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\SalesDB.db
 C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\Azure.Core.dll
 C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\Azure.Identity.dll
 C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -76,3 +73,10 @@ C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\runtimes\li
 C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\runtimes\osx-x64\native\SQLite.Interop.dll
 C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\runtimes\win-x64\native\SQLite.Interop.dll
 C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\SaleDB1.db
+C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\Sale.Dome.dll
+C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\Sale.Infrastructure.dll
+C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\Sales.DB.dll
+C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\Sale.Infrastructure.pdb
+C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\Sale.Dome.pdb
+C:\Users\dell\source\repos\KellySaleMS\Sales.WebAPI\bin\Debug\net6.0\Sales.DB.pdb

@@ -9,7 +9,7 @@
       "Sales.WebAPI/1.0.0": {
         "dependencies": {
           "Microsoft.Data.SqlClient": "4.1.0",
-          "Sales.Library": "1.0.0",
+          "Sale.Infrastructure": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.3",
           "System.Data.SqlClient": "4.8.3"
         },
@@ -1248,15 +1248,29 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
-      "Sales.Library/1.0.0": {
+      "Sale.Dome/1.0.0": {
+        "runtime": {
+          "Sale.Dome.dll": {}
+        }
+      },
+      "Sale.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Sale.Dome": "1.0.0",
+          "Sales.DB": "1.0.0"
+        },
+        "runtime": {
+          "Sale.Infrastructure.dll": {}
+        }
+      },
+      "Sales.DB/1.0.0": {
         "dependencies": {
           "FluentNHibernate": "3.1.0",
-          "Microsoft.Data.SqlClient": "4.1.0",
+          "Sale.Dome": "1.0.0",
           "System.Data.SQLite.Core": "1.0.116",
           "System.Data.SqlClient": "4.8.3"
         },
         "runtime": {
-          "Sales.Library.dll": {}
+          "Sales.DB.dll": {}
         }
       }
     }
@@ -2142,7 +2156,17 @@
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
-    "Sales.Library/1.0.0": {
+    "Sale.Dome/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Sale.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Sales.DB/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
