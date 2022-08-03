@@ -13,9 +13,8 @@ namespace Sales.Library.Services
 {
     public class ItemService : IItemService
     {
-        private static List<Item> items = new();
+        public static List<Item> items = new();
 
-   
         public void AddNewItem(Item item)
         {
             int index=0;

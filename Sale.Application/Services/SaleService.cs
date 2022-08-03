@@ -6,7 +6,7 @@ using Sales.Library.Model;
 
 namespace Sales.Library.Services
 {
-    public class SaleService : ISaleService, ISaleService1
+    public class SaleService : ISaleService
     {
         public static List<Sale> sales = new();
 
