@@ -2,10 +2,6 @@
 {
     public class Sale
     {
-        public Sale()
-        {
-
-        }
         public Sale(List<Item> items)
         {
             SaleDate=DateTime.Now;
