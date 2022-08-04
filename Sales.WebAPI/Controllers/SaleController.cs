@@ -9,6 +9,7 @@ namespace Sales.WebAPI.Controllers
     [ApiController]
     public class SaleController : ControllerBase
     {
+        private static Sale cart = new Sale();
         private readonly ISaleService _sale;
         private readonly IItemService _item;
 
@@ -23,14 +24,29 @@ namespace Sales.WebAPI.Controllers
         {
             return Ok(_sale.GetDailySeleItems(day));
         }
-        [HttpPost("MakeSale")]
-        public IActionResult SellItem(List<Item> items)
+        [HttpPost("addToCart")]
+        public IActionResult PickItem(int itemId, int quantity)
         {
-            if (items != null && items.Count != 0)
+            var item=_item.GetItem(itemId);
+            if (item!=null)
+            {
+                for (int i = 0; i < quantity; i++)
+                {
+                    
+                    cart.Items.Add(item);
+                }
+                return Ok(cart);
+            }else
+                return BadRequest("Item with the given Id is not found.");
+        }
+
+        [HttpPost("makeSale")]
+        public IActionResult SellItem()
+        {
+            if (cart!= null)
             {
                 _sale.MadeSale += _item.OnMadeSale;
-              _sale.SellItems(items);
-                return Ok();
+             return Ok(_sale.SellItems(cart));
             }
             return BadRequest();
         }

@@ -5,7 +5,7 @@ namespace Sales.Library.Services
 {
     public interface ISaleService
     {
-        Sale SellItems(List<Item> items);
+        Sale SellItems(Sale items);
         List<Sale> GetDailySeleItems(DateTime day);
         event EventHandler<SaleEventArg>? MadeSale;
 

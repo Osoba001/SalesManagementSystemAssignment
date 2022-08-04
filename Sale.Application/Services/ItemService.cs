@@ -41,6 +41,11 @@ namespace Sales.Library.Services
             return items;
         }
 
+        public Item GetItem(int itemId)
+        {
+            return items.FirstOrDefault(x => x.Id == itemId);
+        }
+
         public List<Item> GetTopNItem(int n)
         {
             return items.Take(n).ToList();

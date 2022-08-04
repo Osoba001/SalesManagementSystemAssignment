@@ -2,23 +2,22 @@
 {
     public class Sale
     {
-        public Sale(List<Item> items)
+        public Sale()
         {
-            SaleDate=DateTime.Now;
-            Items = items;
+             Items = new();
+             SaleDate =DateTime.Now;
         }
         public virtual int Id { get; set; }
         public virtual List<Item> Items { get; set; }
 
-
-        private decimal _totalPrice;
-
         public virtual decimal TotalPrice
         {
-            get { return _totalPrice; }
-            set { _totalPrice = Items.Sum(x => x.Price); }
+            get { return Items.Sum(x => x.Price); }
         }
-
+        public virtual int Quantity
+        {
+            get { return Items.Count; }
+        }
         public virtual DateTime SaleDate { get; set; }
 
     }

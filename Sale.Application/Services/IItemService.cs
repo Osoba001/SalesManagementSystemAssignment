@@ -13,5 +13,7 @@ namespace Sales.Library.Services
         List<Item> GetAlltems();
 
         void RemoveItem(int itemId);
+
+        Item GetItem(int itemId);
     }
 }
