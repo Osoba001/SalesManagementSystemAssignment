@@ -1,5 +1,6 @@
 ﻿using NHibernate;
 using NHibernate.Linq;
+using Sale.Dome.IRepositories;
 using Sales.Library.DataAccess;
 using Sales.Library.Events;
 using Sales.Library.Model;
@@ -13,75 +14,56 @@ namespace Sales.Library.Services
 {
     public class ItemService : IItemService
     {
-        public static List<Item> items = new();
+        private readonly IITemRepository _itemRepo;
 
-        public void AddNewItem(Item item)
+        public ItemService(IITemRepository itemRepo)
         {
-            int index=0;
-            if (items.Count>0)
-            {
-                index = items.Last().Id+1;
-            }
-            item.Id = index;
-            items.Add(item);
-           
+            _itemRepo = itemRepo;
+        }
+        public async Task<bool> AddNewItem(Item item)
+        {
+         return  await _itemRepo.Add(item);
         }
 
-        public void AddToOldItem(int itemId, int quantity)
+        public async Task<bool> AddToOldItem(int itemId, int quantity)
         {
-            var item=items.FirstOrDefault(x=>x.Id==itemId);
+            var item= _itemRepo.GetById(itemId).FirstOrDefault();
             if (item!=null)
             {
                 item.Quantity = quantity;
+              return await  _itemRepo.Update(item);
             }
+            throw new ArgumentException("Item with the given Id not found");
         }
 
-        public List<Item> GetAlltems()
+        public async Task<List<Item>> GetAlltems()
         {
-            return items;
+            return await _itemRepo.GetAll().ToListAsync();
         }
 
-        public Item GetItem(int itemId)
+        public async Task<Item>? GetItem(int itemId)
         {
-            return items.FirstOrDefault(x => x.Id == itemId);
+            return await _itemRepo.GetById(itemId).FirstOrDefaultAsync();
         }
 
-        public List<Item> GetTopNItem(int n)
+        public async Task<List<Item>> GetTopNItem(int n)
         {
-            return items.Take(n).ToList();
-           
+            return await _itemRepo.GetAll().Take(n).ToListAsync();
+
         }
 
-        public void OnMadeSale(object? source, SaleEventArg e)
+        public async void OnMadeSale(object? source, SaleEventArg e)
         {
             var groupItems=e.Items.GroupBy(x=>x.Id);
             foreach (var item in groupItems)
             {
-                 UpdateSaleItem(item.Key, item.Count());
+              await AddToOldItem(item.Key, -item.Count());
             }
         }
 
-        public void RemoveItem(int itemId)
+        public async Task<bool> RemoveItem(int itemId)
         {
-            var p=items.FirstOrDefault(x=>x.Id==itemId);
-            if (p is not null)
-            {
-               items.Remove(p);
-            }
-            else
-                throw new ArgumentException("Item not found.");
-            
-        }
-
-        private void UpdateSaleItem(int id, int quantity)
-        {
-            var itm = items.FirstOrDefault(x => x.Id == id);
-            if (itm != null)
-            {
-                itm.Quantity = -quantity;
-            }
-            else
-                throw new ArgumentException("Item not found", "ItemId");
+            return await _itemRepo.DeleteById(itemId);
         }
 
     }

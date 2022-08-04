@@ -3,7 +3,7 @@ using Sales.Library.Model;
 
 namespace Sales.Library.Mappings
 {
-    public class MapSale:ClassMap<Sale>
+    public class MapSale:ClassMap<Sales.Library.Model.Sale>
     {
         public MapSale()
         {

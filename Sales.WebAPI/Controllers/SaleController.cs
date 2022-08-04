@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Sale.Dome.DTO;
 using Sales.Library.Model;
 using Sales.Library.Services;
 
@@ -9,7 +10,8 @@ namespace Sales.WebAPI.Controllers
     [ApiController]
     public class SaleController : ControllerBase
     {
-        private static Sale cart = new Sale();
+        Sales.Library.Model.Sale enttity = new();
+        private static CreateSaleCommand cart = new();
         private readonly ISaleService _sale;
         private readonly IItemService _item;
 
@@ -20,14 +22,14 @@ namespace Sales.WebAPI.Controllers
             _item = item;
         }
         [HttpGet("DailySale")]
-        public IActionResult GetDailySale(DateTime day)
+        public async Task<IActionResult> GetDailySale(DateTime day)
         {
-            return Ok(_sale.GetDailySeleItems(day));
+            return Ok(await _sale.GetDailySeleItems(day));
         }
         [HttpPost("addToCart")]
-        public IActionResult PickItem(int itemId, int quantity)
+        public async Task<IActionResult> PickItem(int itemId, int quantity)
         {
-            var item=_item.GetItem(itemId);
+            var item= await _item.GetItem(itemId);
             if (item!=null)
             {
                 for (int i = 0; i < quantity; i++)
@@ -41,14 +43,22 @@ namespace Sales.WebAPI.Controllers
         }
 
         [HttpPost("makeSale")]
-        public IActionResult SellItem()
+        public async Task<IActionResult> SellItem()
         {
             if (cart!= null)
             {
+                MapCreateCommandToEntity();
                 _sale.MadeSale += _item.OnMadeSale;
-             return Ok(_sale.SellItems(cart));
+             return Ok( await _sale.SellItems(enttity));
             }
-            return BadRequest();
+            return BadRequest("No item in the cart yet.");
         }
+
+        private void MapCreateCommandToEntity()
+        {
+          
+            enttity.TotalPrice = cart.TotalPrice;
+            enttity.Items= cart.Items;
+    }
     }
 }

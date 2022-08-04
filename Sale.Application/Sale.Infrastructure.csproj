@@ -11,8 +11,4 @@
     <ProjectReference Include="..\Sales.Library\Sales.DB.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>

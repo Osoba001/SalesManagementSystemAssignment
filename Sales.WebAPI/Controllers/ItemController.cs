@@ -15,35 +15,35 @@ namespace Sales.WebAPI.Controllers
         {
             _item = item;
         }
-        [HttpGet("GetTopN")]
-        public IActionResult GetTopNItems(int n)
+        [HttpGet("getTopN")]
+        public async Task<IActionResult> GetTopNItems(int n)
         {
-            return Ok(_item.GetTopNItem(n));
+            return Ok( await _item.GetTopNItem(n));
         }
         [HttpPost]
-        public IActionResult AddItem([FromBody] Item item)
+        public async Task<IActionResult> AddItem([FromBody] Item item)
         {
-           _item.AddNewItem(item);
-            return Ok();
+            return Ok(await _item.AddNewItem(item));
+           
         }
-        [HttpPut("AddToOldItem")]
-        public IActionResult AddToItem(int ItemId, int quantity)
+        [HttpPut("updateItemQuantity")]
+        public async Task<IActionResult> AddToItem(int ItemId, int quantity)
         {
-            _item.AddToOldItem(ItemId, quantity);
-            return Ok();
+            return Ok(await _item.AddToOldItem(ItemId, quantity));
+            
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            return Ok(_item.GetAlltems());
+            return Ok(await _item.GetAlltems());
         }
 
         [HttpDelete]
-        public IActionResult DeleteItem(int ItemId)
+        public async Task<IActionResult> DeleteItem(int ItemId)
         {
-            _item.RemoveItem(ItemId);
-            return Ok();
+             return Ok(await _item.RemoveItem(ItemId));
+           
         }
     }
 }

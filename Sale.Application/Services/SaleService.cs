@@ -1,5 +1,6 @@
 ﻿using NHibernate;
 using NHibernate.Linq;
+using Sale.Dome.IRepositories;
 using Sales.Library.DataAccess;
 using Sales.Library.Events;
 using Sales.Library.Model;
@@ -8,22 +9,20 @@ namespace Sales.Library.Services
 {
     public class SaleService : ISaleService
     {
-        public static List<Sale> sales = new();
+        private readonly ISaleRepository _saleRepo;
 
-        public List<Sale> GetDailySeleItems(DateTime day)
+        public SaleService(ISaleRepository saleRepo)
         {
-            return sales.Where(x => x.SaleDate.Date == day.Date).ToList();
+            _saleRepo = saleRepo;
+        }
+        public async Task<List<Sales.Library.Model.Sale>> GetDailySeleItems(DateTime day)
+        {
+            return await _saleRepo.GetAll().Where(x => x.SaleDate.Date == day.Date).ToListAsync();
         }
 
-        public Sale SellItems(Sale sale)
+        public async Task<Sales.Library.Model.Sale> SellItems(Sales.Library.Model.Sale sale)
         {
-            int index = 0;
-            if (sales.Count > 0)
-            {
-                index = sales.Last().Id + 1;
-            }
-            sale.Id = index;
-            sales.Add(sale);
+           await _saleRepo.Add(sale);
             OnMadeSales(sale.Items);
             return sale;
         }
